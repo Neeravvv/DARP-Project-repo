@@ -50,8 +50,6 @@ The attributes and emotional characteristics of the songs analyzed in this repos
 
 ## 📊 Visualizations
 
-*(Note: Ensure your generated `.png` files from `analysis.R` are uploaded to the root of this repository for these images to render)*
-
 ### Feature Correlations with Happiness
 ![Correlations](all_correlations.png)
 
