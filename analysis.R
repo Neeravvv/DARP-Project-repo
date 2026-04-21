@@ -1,4 +1,5 @@
-setwd('C:/Users/NEERAV/OneDrive/Desktop/DARP/Project/Datasets')
+library(dplyr)
+library(ggplot2
 
 t2018 = read.csv('top2018.csv')
 t2019 = read.csv('top2019.csv')
@@ -19,6 +20,8 @@ t2023$year <- 2023
 t2024$year <- 2024
 t2025$year <- 2025
 
+combined.data <- bind_rows(t2018, t2019, t2020, t2021, t2022, t2023, t2024, t2025)
+
 # Q) What makes a song happy?
 
 """
@@ -28,7 +31,7 @@ variables for all top songs across 2018-2025 to determine how they impact
 a song's impression as happy.
 """
 
-combined.data <- bind_rows(t2018, t2019, t2020, t2021, t2022, t2023, t2024, t2025)
+par(mfrow = c(2,4))
 
 
 
@@ -281,7 +284,3 @@ ggplot(var_trend, aes(x = year, y = var_loudness)) +
 ggplot(var_trend, aes(x = year, y = var_speechiness)) +
   geom_line() +
   ggtitle("Variance of speechiness Over Time")
-
-"""
-
-"""
